@@ -23,8 +23,9 @@ class DatabaseSeeder extends Seeder
         // ]);
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');//關閉外鍵偵測
         $this->call(CgySeeder::class);
-        $this->call(ArticleSeeder::class);
         $this->call(TagSeeder::class);
+        $this->call(ArticleSeeder::class);
+        
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');//開啟外鍵偵測
     }
 }
