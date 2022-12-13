@@ -6,11 +6,12 @@ use App\Models\Article;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Cgy extends Model
+class Tag extends Model
 {
     use HasFactory;
 
-    public function articles(){
-        return $this->hasMany(Article::class);
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class);
     }
 }
