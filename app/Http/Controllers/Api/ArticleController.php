@@ -127,7 +127,6 @@ class ArticleController extends Controller
     //取得指定分類的所有文章
     public function queryCgyRelation(Cgy $cgy)
     {
-        dd($cgy) ;
         return $cgy->articles;
     }
 
